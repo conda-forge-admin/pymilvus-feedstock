@@ -27,7 +27,8 @@ requirements:
     - vcs_versioning <2
   run:
     - cachetools >=5.0.0
-    - grpcio >=1.66.2,!=1.68.0,!=1.68.1,!=1.69.0,!=1.70.0,!=1.70.1,!=1.71.0,!=1.72.1,!=1.73.0
+    # stricted constraint for python >=3.14
+    - grpcio >=1.75.1
     - orjson >=3.10.15
     - pandas >=1.2.4
     - protobuf >=5.27.2
