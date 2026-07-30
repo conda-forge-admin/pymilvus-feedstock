@@ -24,7 +24,7 @@ requirements:
     - hatchling >=1.27,<1.28
     - python ${{ python_min }}.*
     - setuptools-scm >=8
-    - vcs-versioning <2
+    - vcs_versioning <2
   run:
     - cachetools >=5.0.0
     - grpcio >=1.66.2,!=1.68.0,!=1.68.1,!=1.69.0,!=1.70.0,!=1.70.1,!=1.71.0,!=1.72.1,!=1.73.0
