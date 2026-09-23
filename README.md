@@ -196,6 +196,3 @@ Feedstock Maintainers
 * [@rluria14](https://github.com/rluria14/)
 * [@xylar](https://github.com/xylar/)
 
-
-<!-- dummy commit to enable rerendering -->
-
