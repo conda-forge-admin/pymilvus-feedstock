@@ -24,17 +24,19 @@ requirements:
     - python ${{ python_min }}.*
     - pip
     - hatchling >=1.27,<1.28
+    # setuptools_scm[toml] needs nothing extra on conda-forge
     - setuptools-scm >=8
     - vcs_versioning <2
   run:
     - python >=${{ python_min }}
-    - cachetools >=5.0.0
+    # tightest of upstream's floors (python >=3.14) and exclusions (python <3.14)
     # stricted constraint for python >=3.14
-    - grpcio >=1.75.1
+    - grpcio >=1.75.1,!=1.68.0,!=1.68.1,!=1.69.0,!=1.70.0,!=1.70.1,!=1.71.0,!=1.72.1,!=1.73.0
     - orjson >=3.10.15
-    - pandas >=1.2.4
     - protobuf >=5.27.2
     - python-dotenv >=1.0.1,<2.0.0
+    - pandas >=1.2.4
+    - cachetools >=5.0.0
     - requests >=2.20.0
 
 tests:
@@ -44,6 +46,7 @@ tests:
       python_version:
         - ${{ python_min }}.*
         - ${{ python_check_max }}.*
+        - "*"
 
 about:
   homepage: https://pypi.org/project/pymilvus
